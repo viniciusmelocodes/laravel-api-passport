@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "a142ceaf-0e2b-4a95-a5a4-22a4fae4b30e",
+		"name": "Laravel Tests Passport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"test123\",\n\t\"email\" : \"test123@gmail.com\",\n\t\"password\" : \"123456\",\n\t\"confirm_password\" : \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"test123@gmail.com\",\n\t\"password\" : \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRhY2Q2MWIwNjdhNTYwYTQ2NGFjOTE3Y2RhYjYwZDVkY2E1MDRiNDQxZTZlOGEyN2EyNGU4YTBiZjBlMTliNDZlODE5ZTFjNjM2MWQ2N2Y2In0.eyJhdWQiOiIxIiwianRpIjoiNGFjZDYxYjA2N2E1NjBhNDY0YWM5MTdjZGFiNjBkNWRjYTUwNGI0NDFlNmU4YTI3YTI0ZThhMGJmMGUxOWI0NmU4MTllMWM2MzYxZDY3ZjYiLCJpYXQiOjE1ODM5NjA3NDQsIm5iZiI6MTU4Mzk2MDc0NCwiZXhwIjoxNjE1NDk2NzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.r72xkJDafwfg767tAum_90wqgxHDojBOy-5t_RsSVUURAj27w_W3WP8ltVn6uZR8xGvN-OdWIIPRYBKAY86J_lRYE6qu2Y44uvFrUC0-7ptK4Ci1LMpKey6SIA9p0-RIUl_a2PPfN3JOK32m_xvKqa-u10UC2f3EiAC7-YOnHCWmMRgAHMSpJCC15RcfDtuCkktJyrUC98ZNX8KUIuuWGGxlvMjR1CPjBRkk4iQ571s_1J7J40uP68f0zSlzD6LfyAQo-v9Wt5vymzPVyjAMP25pdppoP_xqF_C9p8FaVf9hoKJW7D4Vx9HAamxPfVy4yJAfEC6PIax-8pLbOCEIEfBotzNNvBlcUD_dLOCKdiGndm6CQtuhJomDBc51J0TugAojIO6zN2gX6nNjwsHuMy5pl0yf_6r9vW5Akc5YfYl-z66PfAb1i_td7vvEifWu04DFnu8A5I65fny-ftxhml9rgaLvPjXbf_tkbnsSzOny8h5Pz0jsudV9TmBwzzmOLZrHqKl9RomRDdEE0cT61bqh23zccHmdbcTT94iMD5q5Vy6apMpodC4YtZtaIixd9wKj7Mj-pzNohVW5wovO6SKYjJ_o5zEry4CCuPNBLlU_4P6NVGeSV7yFyDZeuDhS0kSNXXPLrYo0tqkNLQ1VclyI_tMjLs4lIZws8oOaVLk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFmNTU4OTg3NDdkZjBmNGQ3YTA3MWY5MTRmM2M0NGFiYjMzNmNkOWExYjZmODY0ZmNkNTdlNzEwOTM4OGY0OTkyNmM3ZTA3NGY3ZjMxYzg4In0.eyJhdWQiOiIxIiwianRpIjoiYWY1NTg5ODc0N2RmMGY0ZDdhMDcxZjkxNGYzYzQ0YWJiMzM2Y2Q5YTFiNmY4NjRmY2Q1N2U3MTA5Mzg4ZjQ5OTI2YzdlMDc0ZjdmMzFjODgiLCJpYXQiOjE1ODM5NjA5MTAsIm5iZiI6MTU4Mzk2MDkxMCwiZXhwIjoxNjE1NDk2OTEwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.fFtokV4IL8FgEzv5VPjKtL-FPHMTRiGyHtSB1fypm7_pRraJMMOpBcUX1miNVia7KRFShPUg6D5HYfoR9BB47MCi0MpsGfYL7Xd6xC-1SedgvkI8_4XPkypQWcT5mcnRtE5YT3g1uVr-pFGChBI2UA-xKUfTg65K4xJNxvhjkEYN6FmnhbDyUtxFHupFuc2qjd_tfjUJG7S6TeO6Hr0_cTnhpceK19271MHoXRRxkFc-6aWboMiJ7EU2vmabdfr_Ec6caVbw66zP4Nm33_7aM7g-UyqA-6nRpD4Wwij4rPbwecs0CvUBmUHqImGB31GvjJNyed887tdyMIBYJLCCkeThb3ZoJSWAuaUs-hoW_D02nMp8Jkf_vaqIT9aaF7xHh1hdv4cSl3TyimLjYS8evgoA2brtjWGO5rijK7YP4sQ-e5qtat1Lhk1_oiuK7yqX7IWJ45Tfb91I7bCzSH7BdhWMRmvsdAFfReKdMSSBbZ78ft6lfRGlqTZtpUPWlbA8kvdAXd-bCVywGZ-62x9RiZbUb1_3u2ecTRJ5iq-CT-NUm-aDl3s-ddfeAX1xUi05FkcQokrvuUK0QSVgVnccWANMXUXYJ3qlTohUnkfidvc_dBULNC9U5Qm34ZuF0ZKccNsqTYLiZkHjwNVguYM3ibO4q6Wkq1y00kWnP3d5NE8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/auth/getuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
